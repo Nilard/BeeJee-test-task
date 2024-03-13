@@ -17,7 +17,7 @@ export async function loader({ params }) {
 }
 
 export default function ToDoListEditTask() {
-  const { user } = useAuth();
+  const { logout } = useAuth();
   const [error, setError] = useState('');
   const { data } = useLoaderData();
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -26,7 +26,7 @@ export default function ToDoListEditTask() {
   const navigate = useNavigate();
 
   async function onSubmit(formData) {
-    if (user) {
+    if (localStorage.getItem('user')) {
       formData.status = + formData.status; // Convert boolean to integer
 
       if ((data.status > 1) || (data.text !== formData.text)) {
@@ -49,10 +49,12 @@ export default function ToDoListEditTask() {
       } catch (error) {
         setError(`${error.name}: ${error.message}`);
       }
+    } else {
+      logout();
     }
   };
 
-  if (user) {
+  if (localStorage.getItem('user')) {
     return (
       <>
         <h1>{ t('Edit task') }</h1>
