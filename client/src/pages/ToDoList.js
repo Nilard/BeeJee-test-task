@@ -20,9 +20,11 @@ function ToDoListTablePagination({ count }) {
     <button key={i} onClick={handleClick} className={ (value.activePage - 1) === i ? 'active' : '' } data-index={++i}>{i}</button>
   );
 
-  return (
-    <div className="pagination">{items}</div>
-  );
+  if (count > 1) {
+    return (
+      <div className="pagination">{items}</div>
+    );
+  }
 }
 
 function ToDoListTable() {
