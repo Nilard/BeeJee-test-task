@@ -1,0 +1,23 @@
+// Convert px to rem
+
+@function rem($size) {
+  @return $size * .0625 * 1rem;
+}
+
+
+// Components with dark background
+
+@mixin inverse {
+  color: $color-inverse-text;
+
+  a:not(.button) {
+    &:focus,
+    & {
+      color: $color-inverse-link;
+    }
+
+    &:hover {
+      color: $color-inverse-link-hover;
+    }
+  }
+}

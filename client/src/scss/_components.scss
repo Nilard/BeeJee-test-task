@@ -1,0 +1,201 @@
+// Links
+
+a:not(.button) {
+  color: $color-link;
+  text-decoration: underline;
+
+  &:focus {
+    color: $color-link;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $color-link-hover;
+    text-decoration: underline;
+  }
+}
+
+
+// Typography
+
+h1, h2, h3, h4, h5, h6,
+ol, ul, p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1:first-child {
+  margin-top: 1em;
+}
+
+pre {
+  background-color: $color-light;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-base;
+  padding: $spacer;
+}
+
+// Buttons
+
+.button,
+button {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $font-size-base;
+  padding: ($spacer * .8) ($spacer * 1.6);
+
+  &:focus,
+  &:hover,
+  & {
+    text-decoration: none;
+  }
+
+  &:not(.button-link) {
+    background-color: $color-primary;
+    border-radius: $border-radius-circle;
+    color: $color-inverse-link;
+
+    .pagination & {
+      background-color: $color-medium;
+      margin: $spacer * .25;
+      padding: ($spacer * .5) ($spacer * .8);
+
+      &.active {
+        background-color: $color-dark;
+      }
+    }
+  }
+
+  &.button-link {
+    background-color: transparent;
+    color: $color-link;
+    padding: ($spacer * .8);
+
+    &:hover {
+
+    }
+  }
+}
+
+
+// Images
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+// Forms
+
+form {
+  // display: flex;
+  // flex-direction: column;
+
+  label,
+  input {
+    // display: flex;
+  }
+}
+
+input {
+  margin-bottom: $spacer;
+
+  &:not(
+    [type="button"],
+    [type="checkbox"],
+    [type="color"],
+    [type="file"],
+    [type="image"],
+    [type="radio"],
+    [type="reset"],
+    [type="submit"]
+  ) {
+    border: 1px solid $color-border;
+    border-radius: $border-radius-base;
+    padding: $spacer * .5;
+    width: 100%;
+  }
+
+  &[type="radio"],
+  &[type="checkbox"] {
+    margin: 0 $spacer $spacer 0;
+  }
+
+}
+
+label {
+  display: inline-block;
+  margin-bottom: $spacer * .5;
+}
+
+textarea {
+  border: 1px solid $color-border;
+  border-radius: $border-radius-base;
+  margin-bottom: $spacer;
+  padding: $spacer;
+  width: 100%;
+}
+
+
+// Tables
+
+table {
+  margin-block: $spacer;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+
+  td, th {
+    min-width: $spacer * 2;
+    padding: $spacer * .5;
+  }
+
+  th {
+    .sortable {
+      cursor: pointer;
+    }
+  }
+}
+
+
+// Misc
+
+.error {
+  background-color: $color-error-light;
+  border-radius: $border-radius-base;
+  color: $color-error;
+  margin-bottom: $spacer;
+  padding: $spacer;
+}
+
+.message {
+  background-color: $color-success-light;
+  border-radius: $border-radius-base;
+  color: $color-success;
+  margin-bottom: $spacer;
+  padding: $spacer;
+}
+
+.status {
+  background-color: $color-medium;
+  border-radius: $border-radius-base;
+  color: $color-inverse-link;
+  display: inline-block;
+  font-size: $font-size-xs;
+  margin: $spacer * .25;
+  padding: ($spacer * .25) ($spacer * .5);
+
+  &-done {
+    background-color: $color-success;
+  }
+}
