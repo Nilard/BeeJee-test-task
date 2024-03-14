@@ -10,8 +10,6 @@ CREATE TABLE todo (
   status INTEGER NOT NULL
 );
 
-INSERT INTO todo (name, email, text, status) VALUES ('test', 'test@test.com', 'test job', 0);
-
 --------------------------------------------------------------------------------
 -- Down
 --------------------------------------------------------------------------------
