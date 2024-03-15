@@ -12,6 +12,10 @@ Backend app is located in the `server` subfolder. Implemented using [Express](ht
 
 Database is [SQLite](https://www.sqlite.org). The following [NPM](https://www.npmjs.com) packages are used: [sqlite](https://www.npmjs.com/package/sqlite) is the extension for the [sqlite3](https://www.npmjs.com/package/sqlite3) library that adds supports of promises and migrations.
 
+### Configuration
+
+Default port is `3001` can be changed in `server/bin/www` or via `PORT` environment variable.
+
 ### Run
 
 To run the application execute the following command from the `server` subfolder: `npm start` or `node ./bin/www`.
@@ -25,6 +29,10 @@ Frontend app is located in the `client` subfolder. Implemented using [React](htt
 - [react-router-dom](https://reactrouter.com/en/main) that adds routing support.
 
 Layout is built with [Sass](https://sass-lang.com) (SCSS syntax).
+
+### Configuration
+
+Default API URL is `http://localhost:3001` set in `client/src/utils/utils.js`, can be changed there or via `API_URL` environment variable.
 
 ### Run
 
