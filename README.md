@@ -1,5 +1,26 @@
 # BeeJee-test-task
 
+You need to create a task manager application (ToDo list).
+
+The backend should be on Node.js (Express), and the frontend on React with the use of a central store (Redux, MobX, or context provider). Any relational database is suitable. There are no special requirements for the design, it should just be neat.
+
+Tasks consist of:
+- username
+- email
+- task text
+
+The start page is a list of tasks with the ability to sort by username, email, and status.
+
+Tasks should be displayed in pages of 3 items each (with pagination).
+
+Any visitor can view the list of tasks and create new ones without authorization.
+
+Make a login for the administrator (login `admin`, password `123`).
+
+The administrator can edit the text of the task and mark it as completed.
+
+Completed tasks in the general list are displayed with the corresponding mark.
+
 Working example: http://beejee.ld.am
 
 ## Backend
