@@ -21,8 +21,6 @@ The administrator can edit the text of the task and mark it as completed.
 
 Completed tasks in the general list are displayed with the corresponding mark.
 
-Working example: http://beejee.ld.am
-
 ## Backend
 
 ### Application
